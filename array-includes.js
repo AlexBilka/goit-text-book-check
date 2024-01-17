@@ -39,13 +39,12 @@ console.log(checkStorage(["apple", "plum", "pear"], "carrot")); // "plum is avai
 
 function getCommonElements(array1, array2) {
   const array3 = [];
-  for (let index = 0; index < array1.length; index += 1) 
-  {
-   if (array2.includes(index)) {
-     array3.push(index);
-     } 
+  for (let index = 0; index < array1.length; index += 1) {
+   if (array2.includes(array1[index])) {
+     array3.push(array1[index]);
+     }
   }
   return array3;
 }
 
-console.log(getCommonElements(["apple", "plum", "pear"], ["apple", "plum", "pear"]));
+console.log(getCommonElements(["apple", "plum", "pear", "mango", "apricot"], ["apple", "plum", "pear", "mango", "apricot"]));
