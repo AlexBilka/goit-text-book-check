@@ -19,7 +19,7 @@ item - рядок з назвою товара, наявність якого п
 Виклик checkStorage(["apple", "plum", "pear"], "orange") повертає "Sorry! We are out of stock!"
 Виклик checkStorage(["apple", "plum", "pear"], "carrot") повертає "Sorry! We are out of stock!"
 */
-
+/*
 function checkStorage(storage, item) {
   const itemNorm = item.toLowerCase();
   if (storage.includes(itemNorm)) {
@@ -35,3 +35,17 @@ console.log(checkStorage(["apple", "plum", "pear"], "pear")); // "plum is availa
 console.log(checkStorage(["apple", "plum", "pear"], "pEAr")); // "plum is available to order!"
 console.log(checkStorage(["apple", "plum", "pear"], "orange")); // "plum is available to order!"
 console.log(checkStorage(["apple", "plum", "pear"], "carrot")); // "plum is available to order!"
+*/
+
+function getCommonElements(array1, array2) {
+  const array3 = [];
+  for (let index = 0; index < array1.length; index += 1) 
+  {
+   if (array2.includes(index)) {
+     array3.push(index);
+     } 
+  }
+  return array3;
+}
+
+console.log(getCommonElements(["apple", "plum", "pear"], ["apple", "plum", "pear"]));
