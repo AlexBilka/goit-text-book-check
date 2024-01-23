@@ -23,6 +23,6 @@ const atTheOldToad = {
     return "List of all available potions";
   },
   addPotion(potionName) {
-		return `Adding ${potions.potionsName}`;
+		return `Adding ${potions.potionName}`;
   },
 }
