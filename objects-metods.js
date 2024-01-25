@@ -104,10 +104,10 @@ function calculateTotalPrice(productName) {
 
 let totalPrice = 0;
   for (let product of products) {
-    
+    console.log(product);
     if (product.name === productName) {
       totalPrice = product.price * product.quantity;
-      console.log(totalPrice);
+      
       break;
     } 
   }
