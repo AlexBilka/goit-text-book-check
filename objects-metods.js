@@ -51,7 +51,7 @@ addPotion() — метод, який приймає параметр об'єкт
 Виклик методу atTheOldToad.getTotalPrice() повертає загальну вартість усіх зілль з властивості potions
 */
 
-
+/*
 const atTheOldToad = {
   potions: [
     { name: "Speed potion", price: 460 },
@@ -71,4 +71,51 @@ const atTheOldToad = {
     return totalPrice;
   },
 };
+*/
+/*
+function getAllPropValues(propName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+  let names = [];
+  for (let product of products) {
+    if (product[propName]) {
+      names.push(product[propName]);
+    }    
+  }
+  return names;
+}
 
+
+console.log(getAllPropValues("category")); 
+*/
+
+
+function calculateTotalPrice(productName) {
+  const products = [
+    { name: "Radar", price: 1300, quantity: 4 },
+    { name: "Scanner", price: 2700, quantity: 3 },
+    { name: "Droid", price: 400, quantity: 7 },
+    { name: "Grip", price: 1200, quantity: 9 },
+  ];
+
+let totalPrice = 0;
+  for (let product of products) {
+    
+    if (product.name === productName) {
+      totalPrice = product.price * product.quantity;
+      console.log(totalPrice);
+      break;
+    } 
+  }
+    if (totalPrice) {
+      return totalPrice;
+    } else {
+      return `Product ${productName} not found!`;
+    }  
+  }
+
+console.log(calculateTotalPrice("Scanner"));
