@@ -93,7 +93,7 @@ function getAllPropValues(propName) {
 console.log(getAllPropValues("category")); 
 */
 
-
+/*
 function calculateTotalPrice(productName) {
   const products = [
     { name: "Radar", price: 1300, quantity: 4 },
@@ -119,3 +119,112 @@ let totalPrice = 0;
   }
 
 console.log(calculateTotalPrice("Scanner"));
+*/
+
+/*
+Об'єкт atTheOldToad має наступні властивості:
+
+potions — масив об'єктів зілль
+getPotions() — метод, який повертає значення властивості potions
+updatePotionName() — метод, який приймає два параметра рядків oldName і newName
+Доповни метод updatePotionName(oldName, newName) таким чином,
+щоб він оновлював назву зілля з oldName на newName в масиві зілля у властивості potions.
+
+Оголошена змінна atTheOldToad
+Значення змінної atTheOldToad - це об'єкт
+Значення властивості atTheOldToad.potions - це масив
+Значення властивості atTheOldToad.updatePotionName - це метод об'єкта
+Після першого виклику методу atTheOldToad.updatePotionName("Stone skin", "Invisibility"),
+у властивості potions буде масив [{ name: "Speed potion", price: 460 }, { name: "Invisibility", price: 520 } ]
+Після другого виклику методу atTheOldToad.updatePotionName("Speed potion", "Polymorth"),
+у властивості potions буде масив [{ name: "Polymorth", price: 460 }, { name: "Invisibility", price: 520 } ]
+*/
+
+
+/*
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Stone skin", price: 520 },
+  ],
+  getPotions() {
+    return this.potions;
+  },
+  updatePotionName(oldName, newName) {
+    for (let potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+        break;
+      }
+    }
+  },
+  };
+
+
+atTheOldToad.updatePotionName("Stone skin", "Invisibility");
+
+console.log(getPotions()); // [{ name: "Speed potion", price: 460 }, { name: "Invisibility", price: 520 } ];
+
+atTheOldToad.updatePotionName("Speed potion", "Polymorth");
+
+console.log(getPotions()); // [{ name: "Polymorth", price: 460 }, { name: "Invisibility", price: 520 } ];
+
+//  getPotions is not defined
+*/
+/*
+function add(...args) {
+  const numbers = args;
+  let arrSum = 0;
+  for (const number of numbers) {
+    arrSum += number;
+  }
+  return arrSum;
+}
+
+console.log(add(12, 4, 11, 48)); // повертає `75`;
+*/
+/*
+Функція addOverNum() приймає довільну кількість аргументів чисел.
+
+Доповни код функції таким чином, щоб вона обчислювала суму тільки тих аргументів, які більші за задане число.
+Це число завжди буде передано першим аргументом.
+
+Для вирішення цього завдання тобі потрібно зробити наступне:
+
+Перший параметр value повинен представляти задане число,
+а решта аргументів повинні бути зібрані за допомогою синтаксису (...args)
+Усередині функції ініціалізуй змінну для зберігання загальної суми
+Потім пройдись по кожному аргументу за допомогою циклу
+Перевір, чи кожен аргумент більший за вказане число, і якщо так, додай його до загальної суми
+На завершення поверни загальну суму
+Оголошена функція addOverNum()
+Функція addOverNum приймає наступні параметри: value, ...args
+Виклик addOverNum(50, 15, 27) повертає 0
+Виклик addOverNum(10, 12, 4, 11, 48, 10, 8) повертає 71
+Виклик addOverNum(15, 32, 6, 13, 19, 8) повертає 51
+Виклик addOverNum(20, 74, 11, 62, 46, 12, 36) повертає 218
+*/
+
+/*
+function addOverNum(value, ...args) {
+  let valuesSum = 0;
+  for (let number of args) {
+    if (number > value) {
+      valuesSum += number;
+    }
+  }
+  return valuesSum;
+}
+
+console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
+*/
+
+function getExtremeScores(scores) {
+  const extremeScores = {
+    best: Math.max(...scores),
+    worst: Math.min(...scores),}
+  return extremeScores;
+}
+
+console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
+console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
