@@ -141,7 +141,7 @@ updatePotionName() — метод, який приймає два парамет
 */
 
 
-/*
+
 const atTheOldToad = {
   potions: [
     { name: "Speed potion", price: 460 },
@@ -161,21 +161,18 @@ const atTheOldToad = {
   };
 
 
-atTheOldToad.updatePotionName("Stone skin", "Invisibility");
-
-console.log(getPotions()); // [{ name: "Speed potion", price: 460 }, { name: "Invisibility", price: 520 } ];
+//atTheOldToad.updatePotionName("Stone skin", "Invisibility");
 
 atTheOldToad.updatePotionName("Speed potion", "Polymorth");
 
-console.log(getPotions()); // [{ name: "Polymorth", price: 460 }, { name: "Invisibility", price: 520 } ];
+console.log(atTheOldToad.getPotions());
 
 //  getPotions is not defined
-*/
+
 /*
 function add(...args) {
-  const numbers = args;
   let arrSum = 0;
-  for (const number of numbers) {
+  for (const number of args) {
     arrSum += number;
   }
   return arrSum;
@@ -183,6 +180,8 @@ function add(...args) {
 
 console.log(add(12, 4, 11, 48)); // повертає `75`;
 */
+
+
 /*
 Функція addOverNum() приймає довільну кількість аргументів чисел.
 
@@ -205,6 +204,7 @@ console.log(add(12, 4, 11, 48)); // повертає `75`;
 Виклик addOverNum(20, 74, 11, 62, 46, 12, 36) повертає 218
 */
 
+
 /*
 function addOverNum(value, ...args) {
   let valuesSum = 0;
@@ -218,7 +218,7 @@ function addOverNum(value, ...args) {
 
 console.log(addOverNum(20, 74, 11, 62, 46, 12, 36));
 */
-
+/*
 function getExtremeScores(scores) {
   const extremeScores = {
     best: Math.max(...scores),
@@ -228,3 +228,4 @@ function getExtremeScores(scores) {
 
 console.log(getExtremeScores([19, 7, 4, 17, 81, 24]));
 console.log(getExtremeScores([89, 64, 42, 17, 93, 51, 26]));
+*/
