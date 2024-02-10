@@ -81,27 +81,27 @@
 // console.log(audi.price); // 49000
 
 
-class User {
-  constructor(email) {
-    this.email = email;
-  }
+// class User {
+//   constructor(email) {
+//     this.email = email;
+//   }
 
-  get email() {
-    return this.email;
-  }
+//   get email() {
+//     return this.email;
+//   }
 
-  set email(newEmail) {
-    this.email = newEmail;
-  }
-}
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
 
-class Admin extends User {
-static  role = {
-BASIC: "basic",
-SUPERUSER: "superuser"
-};
+// class Admin extends User {
+// static  role = {
+// BASIC: "basic",
+// SUPERUSER: "superuser"
+// };
      
-}
+// }
 
 
 // class User {
@@ -118,7 +118,49 @@ SUPERUSER: "superuser"
 //   }
 // }
 
-const user = new User("example@example.com");
-console.log(user.email); // При спробі отримати email відбудеться безкінечний рекурсивний виклик
+// const user = new User("example@example.com");
+// console.log(user.email); // При спробі отримати email відбудеться безкінечний рекурсивний виклик
 
 
+// class User {
+//   email;
+
+//   constructor(email) {
+//     this.email = email;
+//   }
+
+//   get email() {
+//     return this.email;
+//   }
+
+//   set email(newEmail) {
+//     this.email = newEmail;
+//   }
+// }
+// class Admin extends User {
+//   static role = {
+//     BASIC: "basic",
+//     SUPERUSER: "superuser",
+//   };
+
+//   constructor({ email, access }) {
+//     super(email);
+//     this.access = access;
+//   this.blacklistedEmails = [];
+//   }
+
+  
+// }
+
+// const mango = new Admin({
+//   email: "mango@mail.com",
+//   access: Admin.role.SUPERUSER,
+// });
+
+// console.log(mango.email); // "mango@mail.com"
+// console.log(mango.access); // "superuser"
+
+// mango.blacklist("poly@mail.com");
+// console.log(mango.blacklistedEmails); // ["poly@mail.com"]
+// console.log(mango.isBlacklisted("mango@mail.com")); // false
+// console.log(mango.isBlacklisted("poly@mail.com")); // true
